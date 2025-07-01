@@ -1,0 +1,451 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    background-color: black;
+    color: white;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    overflow-x: hidden;
+}
+
+/************************/
+/******** FONTS *********/
+/************************/
+
+@font-face {
+    font-family: 'New-Alphabet';
+    src: url(./fonts/new-alphabet/new_alphabet.ttf);
+}
+
+@font-face {
+    font-family: 'Gridnik';
+    src: url(./fonts/gridnik/Gridnik.ttf);
+}
+
+@font-face {
+    font-family: 'Gridnik-Light';
+    src: url(./fonts/Foundry\ Gridnik\ W03\ Light.ttf);
+}
+
+@font-face {
+    font-family: "Foundry Gridnik W03 Regular";
+    src: url("https://db.onlinewebfonts.com/t/d3f1342abd8102278499b984bd1c70f3.eot");
+    src: url("https://db.onlinewebfonts.com/t/d3f1342abd8102278499b984bd1c70f3.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/d3f1342abd8102278499b984bd1c70f3.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/d3f1342abd8102278499b984bd1c70f3.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/d3f1342abd8102278499b984bd1c70f3.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/d3f1342abd8102278499b984bd1c70f3.svg#Foundry Gridnik W03 Bold")format("svg");
+}
+
+@font-face {
+    font-family: "Foundry Gridnik W03 Light";
+    src: url("https://db.onlinewebfonts.com/t/380b88d6c2b6e186ff12893b757d07e5.eot");
+    src: url("https://db.onlinewebfonts.com/t/380b88d6c2b6e186ff12893b757d07e5.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/380b88d6c2b6e186ff12893b757d07e5.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/380b88d6c2b6e186ff12893b757d07e5.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/380b88d6c2b6e186ff12893b757d07e5.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/380b88d6c2b6e186ff12893b757d07e5.svg#Foundry Gridnik W03 Light")format("svg");
+}
+
+@import url(https://db.onlinewebfonts.com/c/380b88d6c2b6e186ff12893b757d07e5?family=Foundry+Gridnik+W03+Light);
+
+/************************/
+/******** NAV ***********/
+/************************/
+
+a {
+    font-family: "Foundry Gridnik W03 Light";
+    text-decoration: none;
+    color: white;
+    font-style: normal;
+}
+
+.material-icons {
+     font-style: normal;
+}
+
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    padding-top: 60px;
+    border-right: solid white 1px;
+    background-color: black;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+.sidebar a {
+    margin: 20px 0;
+    padding: 50px 0; 
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    font-style: normal;
+}
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  main .sidebar{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    font-style: normal;
+  }
+  
+  
+  #main {
+    transition: margin-left 0.5s;
+    padding: 16px;
+    margin-left: 305px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidebar {
+      padding-top: 15px;
+    }
+    .sidebar a {
+      font-size: 18px;
+    }
+  }
+
+
+  .edit_text {
+    font-family: 'New-Alphabet';
+    font-size: 128px;
+    margin-top: 64px;
+}
+
+/***************************/
+/******** HEADER ***********/
+/***************************/
+
+:root {
+	--heading-height: 30em;
+}
+
+
+header {
+    font-family:'New-Alphabet';
+	position: sticky;
+	width: 100%;
+	height: 20em;
+	right: 0; 
+    z-index: 1;
+}
+
+
+header::before {
+	content: "";
+	display: block;
+	position: absolute;
+	right: 0; 
+	bottom: 6em;
+	width: 100%;
+	height: 20em;
+	z-index: -1;
+	transform: skewY(-3.5deg);
+	background-size: cover;
+	border-bottom: 1px solid #fff;
+}
+
+.header-h1 {
+    font-size: 128px;
+	padding: 5rem 0 0 20rem; 
+	text-align: left; 
+	color: #fff;
+}
+
+
+/************************/
+/******** MAIN ***********/
+/************************/
+
+.letter {
+    margin-bottom: 100px;
+}
+
+.letter h1 {
+    font-family: "Foundry Gridnik W03 Regular";
+    margin-bottom: 4px;
+    font-style: normal;
+}
+
+
+.letter p {
+    font-family: 'Gridnik-Light';
+    width: 50%;
+    font-style: normal;
+}
+
+.wim-crouwel h1 {
+    font-family: "Foundry Gridnik W03 Regular";
+    margin-bottom: 4px;
+    font-style: normal;
+}
+
+.wim-crouwel p {
+    font-family: 'Gridnik-Light';
+    margin-bottom: 16px;
+    font-style: normal;
+    margin-right: 20em;
+    width: 100%;
+}
+
+.wim-crouwel h2 {
+    font-family: "Foundry Gridnik W03 Regular";
+    margin-bottom: 4px;
+    font-style: normal;
+}
+
+.text-img-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.wim-img-container  {
+    margin-right: 30em;
+}
+
+.wim-img-container img  {
+    width: 36vw;
+}
+
+.container-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+[contenteditable] {
+    outline: 0px solid transparent;
+  }
+
+.typografie {
+    margin-bottom: 64px;
+}
+
+.typografie h2:nth-of-type(1) {
+    font-family: 'New-Alphabet';
+    font-size: 80px ;
+    letter-spacing: 6px;
+}
+
+.typografie h2:nth-of-type(2) {
+    font-family: 'New-Alphabet';
+    font-size: 80px ;
+    letter-spacing: 6px;
+    text-transform: capitalize;
+    margin-top: 32px;
+}
+
+.tekens h2 {
+    font-family: 'Gridnik-Light';
+}
+
+.tekens h2:nth-of-type(2) {
+    font-family: 'Gridnik-Light';
+    margin-top: 32px;
+}
+
+.feitje p {
+    font-family: 'Gridnik-Light';
+}
+
+  
+/***********************************/
+/******** SCROLLING TEXT ***********/
+/***********************************/
+
+
+.moving-text-link {
+    text-decoration: none;
+}
+
+.scrolling_text {
+    font-family: 'New-Alphabet';
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+    margin-left: 250px;
+    font-style: normal;
+}
+
+.text-1 {
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.text-1 span {
+    margin: 0 40px;
+    color: #fff;
+}
+
+@keyframes animate_text {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.text-1 {
+    font-size: 80px;
+    font-weight: 700;
+    color: #3A1240;
+    animation: animate_text 50s linear infinite;
+}
+
+
+/*****************************/
+/******** CAROUSEL ***********/
+/*****************************/
+
+.container {
+    width: 100%;
+    display: flex;
+    margin-left: 260px;
+    margin-bottom: 100px;
+    align-items: center;
+}
+
+.carousel-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.25s ease-in;
+}
+
+.item-list {
+    max-width: 100vw;
+    width: 70vw; 
+    display: flex;
+    gap: 48px;
+    scroll-behavior: smooth;
+    transition: all 0.25s ease-in;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+}
+
+
+.item-list::-webkit-scrollbar {
+    display: none;
+}
+
+.item {
+    scroll-snap-align: center;
+    height: auto;
+    max-height: 60vh;
+    width: auto;
+}
+
+
+button {
+    border: none;
+    cursor: pointer;
+    background: none;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+.prev-btn, .next-btn {
+    background-color: white; 
+    color: white;
+    border: none;
+    cursor: pointer; 
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.flex-1 {
+    width: 100%;
+    height: auto; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.item img {
+    width: 100vw; 
+    height: auto; 
+    max-height: 80vh; 
+    object-fit: contain; 
+}
+
+.flex-1 p:nth-of-type(1) {
+    font-family: "Foundry Gridnik W03 Regular";
+    margin-top: 8px;
+}
+
+.flex-1 p:nth-of-type(2) {
+    font-family: "Gridnik-Light";
+    margin-top: 4px;
+}
+
+.in-gebruik-div {
+    margin-top: 100px ;
+}
+
+.in-gebruik-div h2 {
+    font-family: "Foundry Gridnik W03 Regular";
+    font-size: 36px;
+}
+
+
+/****************************/
+/******** POSTERS ***********/
+/****************************/
+
+.meer-van-wim-div h2 {
+    font-family: "Foundry Gridnik W03 Regular";
+    font-size: 36px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+    width: 95%;
+    gap: 36px;
+}
+
+.flex-row img {
+    width: 100%;
+    height: 90%;
+}
+
+.flex-row div p {
+    width: 80%;
+    margin-top: 6px;
+    font-family: 'Gridnik-Light';
+}
+
+.flex-row div{
+    width: 80%;
+}
+
